@@ -1,8 +1,10 @@
 
 
 class Vendor
-  def initialize()
-
+  attr_accessor :item_qty
+  def initialize(item_qty)
+    @item_qty = item_qty
+  end
 end
 #
 # # prompting user to input shopping item
