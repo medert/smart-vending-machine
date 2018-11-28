@@ -1,8 +1,0 @@
----
-title: "Smart Vending Machine"
-type: "challenge"
-description: "Building a vending machine that vends food using different kinds of loops"
-tags: "loops"
-visibility: "confirm"
-ignore:
-- "smart_vending_machine.md"
