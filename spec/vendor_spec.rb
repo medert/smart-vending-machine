@@ -41,15 +41,15 @@ RSpec.describe Vendor do
     end
   end
 
-  err_msg = "Invalid input, please enter number or phrase that contain 'tons'\n"
+  err_msg = "Invalid input, please enter number or phrase that contains 'tons'\n"
   describe ".despense" do
-    it "should despense .item .item_qty times" do
+    it "should print out string" do
+      expect{vendor_3.despense.class}.to output(String).to_stdout
+    end
+    it "should print .item .item_qty times" do
       expect{vendor_1.despense}.to output("candy\ncandy\n").to_stdout
       expect{vendor_2.despense}.to output("bread\nbread\nbread\n").to_stdout
       expect{vendor_3.despense}.to output("jeans\n" * vendor_3.item_qty).to_stdout
-    end
-    it "should output string" do
-      expect{vendor_3.despense.class}.to output(String).to_stdout
     end
     it "should print out 'Invalid, input' error" do
       expect{vendor_4.despense}.to output(err_msg).to_stdout
